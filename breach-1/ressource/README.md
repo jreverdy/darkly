@@ -1,23 +1,18 @@
-# Darkly - Writeup : exposition du flag
+# Darkly - Writeup : exposition du flag via cookie
 
 ## Analyse
 
-Dans les cookies se trouve en clair un flag.
+En inspectant les cookies de la page, on remarque qu’une valeur est stockée en clair : ```68934a3e9455fa72420237eb05902327```.
 
-## Récupération du flag
+## Exploitation
 
-Inspection des requêtes via les outils développeur du navigateur.
-
-Le flag est présent dans les cookies de la requête.
+Cette valeur ressemble à un hash de type MD5. On le décryptant on se rend compte que le hash vaut `False`. Il suffit donc de modifier la valeur du cookie par `True` en MD5.
 
 ## Vulnérabilités
 
-* Stockage de données sensibles côté client (cookies)
-
-## Bonnes pratiques
-
-* Ne jamais stocker d’informations sensibles dans les cookies
+* Stockage de données sensibles côté client (cookies)  
+* Confiance excessive du serveur aux données fournies par le client
 
 ## Conclusion
 
-Des données sensibles sont exposées côté client, permettant une récupération triviale du flag.
+Cette faille illustre clairement pourquoi il ne faut jamais stocker d’informations critiques dans les cookies ou exposer des données sensibles côté client. La vulnérabilité permet la récupération directe du flag de façon triviale.
