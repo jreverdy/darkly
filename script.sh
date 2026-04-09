@@ -4,9 +4,11 @@ for i in $(seq 1 14)
 do
     dir="breach-$i"
     
-    mkdir -p "$dir/ressource"
+    mkdir -p "$dir/ressource/"
     
     touch "$dir/flag"
+    
+    touch "$dir/ressource/.gitkeep"
     
     echo "Dossier $dir créé avec succès."
 done
