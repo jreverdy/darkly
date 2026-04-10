@@ -10,16 +10,10 @@ Sur la page d’accueil, un lien "copyright" est présent :
 
 Ce lien utilise le paramètre `page` avec une valeur hashée au lieu d’un nom de fichier classique.
 
-## Exploitation
-
 En cliquant sur ce lien, on accède à une page spécifique correspondant au copyright.
 
 Le paramètre hashé agit comme un identifiant de page.
 
-## Résultat
+## Bonnes pratiques
 
-La page contient directement le flag.
-
-## Conclusion
-
-L’application utilise des identifiants hashés pour référencer certaines pages. Bien que cela donne une impression d’obfuscation, ces liens restent accessibles et visibles côté client, ce qui permet d’accéder directement à des ressources sensibles.
+Ne pas laisser d'informations privées ou confidentielles dans les parametres d'URL.

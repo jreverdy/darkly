@@ -10,18 +10,15 @@ Le paramètre `page` dans l’URL est utilisé pour inclure des fichiers côté 
 
 Aucune validation n’est appliquée sur cette valeur.
 
-## Exploitation
-
 En modifiant le paramètre, il est possible d’accéder à des fichiers système :
 
 ```
 http://10.19.202.124/index.php?page=../../../../../../../etc/passwd
 ```
 
-## Résultat
-
 Le contenu de `/etc/passwd` est affiché, confirmant une vulnérabilité de type Local File Inclusion.
 
-## Conclusion
+## Bonnes pratiques
 
-Le paramètre `page` permet d’accéder à des ressources arbitraires sur le serveur en manipulant le chemin fourni par l’utilisateur.
+Ne jamais inclure directement une entrée utilisateur sans validation. Il faudrait par exemple dans ce cas verifier que le chemin est encore dans le bon dossier.
+Ne jamais utiliser une donnée contrôlée par l’utilisateur dans une fonction d’inclusion.

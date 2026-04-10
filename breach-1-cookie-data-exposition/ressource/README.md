@@ -1,4 +1,4 @@
-# Darkly - Writeup : exposition du flag via cookie
+# Darkly - Writeup : exposition de donnée importante via cookie
 
 ## Analyse
 

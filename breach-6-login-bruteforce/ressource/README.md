@@ -1,4 +1,4 @@
-# Darkly - Writeup : Accès à une page via paramètre hashé
+# Darkly - Writeup : Passage en brute force pour trouver des identifiants de connexion
 
 ## Analyse
 

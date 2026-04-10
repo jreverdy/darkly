@@ -1,8 +1,8 @@
 # Darkly - Writeup : récupération du flag via XSS “inattendu”
 
-## Exploitation
+## Analyse
 
-Ce cas est un peu étrange : en essayant des failles XSS et des injections de balises `<script>`, on a testé un simple `script` **sans balise**, et cela donne le flag directement. C’est le genre de comportement qui **ne devrait pas se produire**.
+Ce cas est un peu étrange : en essayant des failles XSS et des injections de balises `<script>`, on se rend compte que tout ce qui est entre chevron est supprimé du commentaire. On a donc testé un simple `script` **sans balise**, et cela donne le flag directement.
 
 ## Bonnes pratiques
 
