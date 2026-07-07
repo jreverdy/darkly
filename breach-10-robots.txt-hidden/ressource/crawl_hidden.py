@@ -6,7 +6,8 @@ from urllib.parse import urljoin
 import sys
 import time
 
-BASE_URL = "http://10.13.200.230/.hidden/"
+IP = "10.13.200.231" # TO CHANGE
+BASE_URL = f"http://{IP}/.hidden/"
 STOP_WORD = "flag"
 DELAY = 0.02  # petite pause entre requêtes (secondes), 0 pour désactiver
 
