@@ -18,7 +18,7 @@ En utilisant une requête avec `UNION`, il est possible de récupérer les table
 ### Récupération des tables
 
 ```sql
-1 UNION SELECT table_name, column_name FROM information_schema.tables
+1 UNION SELECT table_name, column_name FROM information_schema.columns
 ````
 
 Parmi les résultats, la table `list_images` attire l’attention.

